@@ -1,4 +1,3 @@
-@import 'base/reset.scss';
 @import 'base/typography.scss';
 @import 'utilities/mixins.scss';
 @import 'utilities/variables.scss';
@@ -7,6 +6,9 @@
 @import 'pages/page3.scss';
 @import 'layout/body.scss';
 @import 'layout/header.scss';
+@import 'layout/main.scss';
 @import 'layout/footer.scss';
+@import 'components/card.scss';
 @import 'components/buttons.scss';
 @import 'components/forms.scss';
+@import 'components/banner.scss';
