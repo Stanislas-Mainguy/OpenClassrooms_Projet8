@@ -1,8 +1,10 @@
 import React from "react";
 
-const CardTitle = () => {
+const CardTitle = ({ title }) => {
     return (
-        <p className="card-title">Titre de la location</p>
+        <div className="card-title">
+            <p>{title}</p>
+        </div>
     );
 };
 
