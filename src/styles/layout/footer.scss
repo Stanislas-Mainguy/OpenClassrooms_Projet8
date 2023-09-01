@@ -1,9 +1,49 @@
-footer {
-    width: 1440px;
+.footer {
+    background-color: #000000;
+    color: #FFFFFF;
     height: 209px;
+    width: 100%;
+    margin-top: 50px;
+
     display: flex;
     flex-direction: column;
-    padding: 66px auto 29px auto;
-    gap: 28.56px;
-    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+
+    .logo-container {
+        display: flex;
+        width: 122px;
+        height: 39.4px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .block-k {
+        @include logo-block(32px, 36px);
+    }
+    
+    .block-house {
+        @include logo-block(27px, 31px);
+    }
+    
+    .block-s {
+        @include logo-block(23px, 28px);
+    }
+    
+    .block-a {
+        @include logo-block(24px, 28px);
+    }
+    
+    .block-k img,
+    .block-house img,
+    .block-s img,
+    .block-a img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .footer-text {
+        margin-top: 28.56px;
+    }
 }
