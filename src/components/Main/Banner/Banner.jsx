@@ -1,12 +1,11 @@
 import React from "react";
-import Picture from "./Picture";
-import Text from "./Text";
+import PictureBanner from "../../../assets/pictures/bannerPicture.png";
 
 const Banner = () => {
     return (
         <div className="banner">
-            <Picture />
-            <Text />
+            <img src={PictureBanner} alt="Bannière de présentation" />
+            <p className="banner-text">Chez vous, partout et ailleurs</p>
         </div>
     );
 };
