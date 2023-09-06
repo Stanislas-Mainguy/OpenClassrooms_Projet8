@@ -3,37 +3,29 @@
     width: 340px;
     height: 340px;
     border-radius: 10px;
-}
 
-.card img {
-    width: 340px;
-    height: 340px;
-    border-radius: 10px;
-    object-fit: cover;
+    img {
+        width: 340px;
+        height: 340px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
 
-    &::before {
-        content: "";
+    &-filter {
         position: absolute;
-        border-radius: 25px;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.1);
-        pointer-events: none;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
     }
-}
 
-
-
-.card-title {
-    text-align: start;
-    position: absolute;
-    width: 300px;
-    left: 20px;
-    top: 268px;
-    color: #FFFFFF;
-    font-size: 18px;
-    font-family: $font-family;
-    font-weight: 500;
+    &-title {
+        text-align: start;
+        position: absolute;
+        width: 300px;
+        left: 20px;
+        top: 268px;
+        color: #FFFFFF;
+        font-size: 18px;
+    }
 }

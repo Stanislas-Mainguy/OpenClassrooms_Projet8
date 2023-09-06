@@ -1,0 +1,28 @@
+.collapse {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+
+    &.open {
+        .collapse-toggle {
+            background-color: #f0f0f0;
+        }
+        .collapse-content {
+            display: block;
+        }
+    }
+
+    .collapse-toggle {
+        display: block;
+        padding: 10px;
+        background-color: #e0e0e0;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .collapse-content {
+        display: none;
+        padding: 10px;
+    }
+}
