@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import Header from "../../Header/Header";
 import Main from "./Components/Main";
 import Footer from "../../Footer/Footer";
@@ -13,4 +13,4 @@ const AppartmentPage = () => {
     );
 };
 
-export default AppartmentPage;
+export default AppartmentPage; */
