@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/styles/components/collapse.scss","collapse.css"],"names":[],"mappings":"AAAA;EACI,sBAAA;EACA,kBAAA;EACA,YAAA;EACA,gBAAA;ACCJ;ADEQ;EACI,yBAAA;ACAZ;ADEQ;EACI,cAAA;ACAZ;ADII;EACI,cAAA;EACA,aAAA;EACA,yBAAA;EACA,gBAAA;EACA,eAAA;ACFR;ADKI;EACI,aAAA;EACA,aAAA;ACHR","file":"collapse.css"}
