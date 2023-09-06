@@ -1,9 +1,24 @@
-footer {
-  width: 1440px;
+.footer {
+  background-color: #000000;
+  color: #FFFFFF;
   height: 209px;
+  width: 100%;
+  margin-top: 50px;
+  gap: 28.56px;
   display: flex;
   flex-direction: column;
-  padding: 66px auto 29px auto;
-  gap: 28.56px;
-  background-color: #000000;
+  justify-content: center;
+  align-items: center;
+}
+.footer .logo-footer {
+  width: 122px;
+  height: 39.4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .logo-footer img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
 }/*# sourceMappingURL=footer.css.map */

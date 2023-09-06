@@ -28,13 +28,17 @@
 }
 .nav .nav-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   list-style: none;
   width: 100%;
   height: 100%;
+  gap: 57px;
 }
 .nav .nav-link {
   text-decoration: none;
   color: #FF6060;
+  font-size: 24px;
+}
+.nav .nav-link.active {
+  text-decoration: underline;
 }/*# sourceMappingURL=header.css.map */
