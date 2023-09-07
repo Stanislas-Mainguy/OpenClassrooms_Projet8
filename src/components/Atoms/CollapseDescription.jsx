@@ -1,6 +1,8 @@
 import React from 'react';
+import aboutData from '../../data/about.json';
 
-const CollapseDescription = ({ description }) => {
+const CollapseDescription = () => {
+  const description = aboutData.description;
   return <p>{description}</p>;
 };
 
