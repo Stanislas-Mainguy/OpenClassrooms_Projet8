@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import CollapseArrow from './CollapseArrow';
-import CollapseTitle from './CollapseTitle';
-import CollapseDescription from './CollapseDescription';
+import CollapseArrow from '../Atoms/CollapseArrow';
+import CollapseTitle from '../Atoms/CollapseTitle';
+import CollapseDescription from '../Atoms/CollapseDescription';
 
 const Collapse = ({ title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +11,9 @@ const Collapse = ({ title, description }) => {
   };
 
   return (
-    <div>
+    <div className="collapse">
+      <CollapseTitle title={title} />
       <div onClick={toggleCollapse}>
-        <CollapseTitle title={title} />
         <CollapseArrow />
       </div>
       {isOpen && <CollapseDescription description={description} />}
