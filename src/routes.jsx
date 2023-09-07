@@ -5,7 +5,6 @@ import ErrorPage from './pages/ErrorPage';
 import Appartment from './pages/AppartmentPage';
 import About from './pages/AboutPage';
 
-
 const Routes = () => {
   return (
     <Router>
