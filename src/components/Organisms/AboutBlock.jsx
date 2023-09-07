@@ -1,11 +1,18 @@
-import React from "react";
+import React from 'react';
+import Collapse from '../Molecules/Collapse';
 
-const AboutBlock = () => {
-    return (
-        <div className="about-block">
-            
-        </div>
-    );
+const AboutBlock = ({ items }) => {
+  return (
+    <div className="about-block">
+      {items.map((item, index) => (
+        <Collapse
+          key={item.id}
+          title={item.title}
+          description={item.description}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default AboutBlock;
