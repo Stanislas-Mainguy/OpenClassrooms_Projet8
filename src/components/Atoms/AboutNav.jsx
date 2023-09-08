@@ -10,7 +10,7 @@ const AboutNav = () => {
         to={location.pathname === "/about" ? "#" : "/about"}
         className={location.pathname === "/about" ? "nav-link active" : "nav-link"}
       >
-        À propos
+        A propos
       </Link>
     </li>
   );
