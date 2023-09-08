@@ -7,35 +7,35 @@ import aboutData from '../../data/about.json';
 
 const AboutPageMain = () => {
   return (
-    <main className="main">
+    <>
       <Banner page="AboutPage"/>
       <AboutBlock items={aboutData} />
-    </main>
+    </>
   );
 };
 
 const ErrorPageMain = () => {
   return (
-    <main className="main">
+    <>
       {/* Contenu pour la page d'erreur */}
-    </main>
+    </>
   );
 };
 
 const AppartmentPageMain = () => {
   return (
-    <main className="main">
+    <>
       {/* Contenu pour la page d'appartement */}
-    </main>
+    </>
   );
 };
 
 const HomePageMain = () => {
   return (
-    <main className="main">
+    <>
       <Banner />
       <Gallery />
-    </main>
+    </>
   );
 };
 
