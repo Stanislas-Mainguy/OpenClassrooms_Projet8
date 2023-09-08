@@ -7,8 +7,7 @@ const AboutBlock = ({ items }) => {
       {items.map((item, index) => (
         <Collapse
           key={item.id}
-          title={item.title}
-          description={item.description}
+          data={item}
         />
       ))}
     </div>
