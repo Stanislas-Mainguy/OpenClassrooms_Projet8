@@ -1,9 +1,11 @@
 import React from 'react';
-import aboutData from '../../data/about.json';
 
-const CollapseTitle = () => {
-  const title = aboutData.title;
-  return <h3>{title}</h3>;
+const CollapseTitle = ({ title }) => {
+  return (
+    <div className="collapse-title">
+      <h3>{title}</h3>
+    </div>
+  );
 };
 
 export default CollapseTitle;
