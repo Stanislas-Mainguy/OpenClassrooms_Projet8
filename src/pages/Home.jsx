@@ -3,7 +3,7 @@ import Header from "../components/Organisms/Header";
 import Main from "../components/Organisms/Main";
 import Footer from "../components/Organisms/Footer";
 
-function Home() {
+const Home = () => {
   return (
     <div id="global">
       <Header />
