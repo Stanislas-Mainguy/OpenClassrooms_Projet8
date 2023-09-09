@@ -1,16 +1,16 @@
-/* import React from "react";
-import Header from "../components/Header/Header";
-import Error from "../components/Error/Error404";
-import Footer from "../components/Footer/Footer";
+import React from "react";
+import Header from "../components/Organisms/Header";
+import Main from "../components/Organisms/Main";
+import Footer from "../components/Organisms/Footer";
 
-function ErrorPage() {
+const ErrorPage = () => {
   return (
     <div id="global">
       <Header />
-      <Main />
+      <Main page="ErrorPage" />
       <Footer />
     </div>
   );
 }
 
-export default ErrorPage; */
+export default ErrorPage;
