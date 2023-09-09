@@ -4,6 +4,7 @@ import AboutBlock from './AboutBlock';
 import Banner from '../Molecules/Banner';
 import Gallery from './Gallery';
 import aboutData from '../../data/about.json';
+import Error from '../../components/Molecules/Error';
 
 const AboutPageMain = () => {
   return (
@@ -17,7 +18,7 @@ const AboutPageMain = () => {
 const ErrorPageMain = () => {
   return (
     <>
-      {/* Contenu pour la page d'erreur */}
+      <Error />
     </>
   );
 };
@@ -46,12 +47,12 @@ const Main = () => {
     switch (location.pathname) {
       case '/about':
         return <AboutPageMain />;
-      case '/error404':
-        return <ErrorPageMain />;
+      case '/':
+        return <HomePageMain />;
       case '/appartment':
         return <AppartmentPageMain />;
       default:
-        return <HomePageMain />;
+        return <ErrorPageMain />;
     }
   })();
 
