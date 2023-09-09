@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import CollapseArrow from '../Atoms/CollapseArrow';
 import CollapseDescription from '../Atoms/CollapseDescription';
 import CollapseTitle from '../Atoms/CollapseTitle';
@@ -8,6 +8,10 @@ const Collapse = ({ data }) => {
   const [isArrowRotated, setIsArrowRotated] = useState(false);
   const descriptionRef = useRef(null);
 
+  useEffect(() => {
+    setIsDescriptionOpen(false);
+  }, []);
+
   const toggleCollapse = () => {
     setIsDescriptionOpen(!isDescriptionOpen);
     setIsArrowRotated(!isArrowRotated);
@@ -16,12 +20,14 @@ const Collapse = ({ data }) => {
       const descriptionHeight = descriptionRef.current.scrollHeight;
 
       if (!isDescriptionOpen) {
-        descriptionRef.current.style.maxHeight = '0';
-      } else {
         descriptionRef.current.style.maxHeight = `${descriptionHeight}px`;
+      } else {
+        descriptionRef.current.style.maxHeight = '0';
       }
     }
   };
+
+  const descriptionClass = `collapse-description ${isDescriptionOpen ? 'open' : 'close'}`;
 
   return (
     <div className="collapse">
@@ -33,7 +39,7 @@ const Collapse = ({ data }) => {
       </div>
       <div
         ref={descriptionRef}
-        className={`collapse-description ${isDescriptionOpen ? 'open' : ''}`}
+        className={descriptionClass}
       >
         <CollapseDescription description={data.description} />
       </div>
