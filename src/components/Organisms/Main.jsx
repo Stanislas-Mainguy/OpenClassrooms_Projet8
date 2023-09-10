@@ -24,10 +24,11 @@ const ErrorPageMain = () => {
   );
 };
 
-const AppartmentPageMain = () => {
+const AppartmentPageMain = (props) => {
+  const { id } = props;
   return (
     <>
-      <AppartmentBlock />
+      <AppartmentBlock id={id} items={aboutData} />
     </>
   );
 };
@@ -41,21 +42,21 @@ const HomePageMain = () => {
   );
 };
 
-const Main = () => {
+const Main = (props) => {
   const location = useLocation();
-
-  if (location.pathname.startsWith('/appartment')) {
-    return <AppartmentPageMain />;
-  }
-
+  
   switch (location.pathname) {
+    case '/appartment/:id':
+      return <AppartmentPageMain id={props.id} />;
     case '/about':
       return <AboutPageMain />;
-    case '/error404':
-      return <ErrorPageMain />;
-    default:
+    case '/':
       return <HomePageMain />;
-  }
+    default:
+      if (location.pathname === '/error404') {
+        return <ErrorPageMain />;
+      }
+  };  
 };
 
 export default Main;

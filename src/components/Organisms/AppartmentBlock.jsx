@@ -4,15 +4,17 @@ import Host from "../Molecules/Host";
 import Carousel from "../Molecules/Carousel";
 import AppartmentInfo from "../Molecules/AppartmentInfo";
 import CollapseBlock from "../Molecules/CollapseBlock";
+import appartmentData from '../../data/data.json';
 
-const AppartmentBlock = () => {
+const AppartmentBlock = ({ match }) => {
+    const { id } = match.params;
     return (
         <>
-            <Carousel />
-            <AppartmentInfo />
-            <Host />
-            <Rate />
-            <CollapseBlock />
+            <Carousel appartmentId={id} appartments={appartmentData} />
+            <AppartmentInfo appartmentId={id} appartments={appartmentData} />
+            <Host appartmentId={id} appartments={appartmentData} />
+            <Rate appartmentId={id} appartments={appartmentData} />
+            <CollapseBlock appartmentId={id} appartments={appartmentData} />
         </>
     );
 };
