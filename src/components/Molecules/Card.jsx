@@ -1,11 +1,20 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Card = ({ data }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    const cardId = data.id;
+
+    navigate(`/appartment/${cardId}`);
+  };
+
   return (
-    <div className="card">
+    <div className="card" onClick={handleClick}>
       <div className="card-filter"></div>
-      <div>
-          <img src={data.cover} alt={data.title} />
+      <div className="card-picture">
+        <img src={data.cover} alt={data.title} />
       </div>
       <div className="card-title">
         <p>{data.title}</p>
