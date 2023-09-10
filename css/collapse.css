@@ -54,4 +54,7 @@
 }
 .collapse-description.open {
   transition: max-height 0.5s ease-in-out;
+}
+.collapse-description.close {
+  max-height: 0;
 }/*# sourceMappingURL=collapse.css.map */
