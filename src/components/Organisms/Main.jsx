@@ -5,6 +5,7 @@ import Banner from '../Molecules/Banner';
 import Gallery from './Gallery';
 import aboutData from '../../data/about.json';
 import Error from '../../components/Molecules/Error';
+import AppartmentBlock from './AppartmentBlock';
 
 const AboutPageMain = () => {
   return (
@@ -26,7 +27,7 @@ const ErrorPageMain = () => {
 const AppartmentPageMain = () => {
   return (
     <>
-      {/* Contenu pour la page d'appartement */}
+      <AppartmentBlock />
     </>
   );
 };
@@ -43,24 +44,18 @@ const HomePageMain = () => {
 const Main = () => {
   const location = useLocation();
 
-  const getPageContent = (() => {
-    switch (location.pathname) {
-      case '/about':
-        return <AboutPageMain />;
-      case '/':
-        return <HomePageMain />;
-      case '/appartment':
-        return <AppartmentPageMain />;
-      default:
-        return <ErrorPageMain />;
-    }
-  })();
+  if (location.pathname.startsWith('/appartment')) {
+    return <AppartmentPageMain />;
+  }
 
-  return (
-    <main className="main">
-        {getPageContent}
-    </main>
-  );
+  switch (location.pathname) {
+    case '/about':
+      return <AboutPageMain />;
+    case '/error404':
+      return <ErrorPageMain />;
+    default:
+      return <HomePageMain />;
+  }
 };
 
 export default Main;
