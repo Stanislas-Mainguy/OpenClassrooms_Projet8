@@ -1,8 +1,7 @@
 import React from "react";
-import Template from "../components/Template/Pages";
+import Template from "../components/Template/PagesTemplate";
 import Banner from "../components/Molecules/Banner";
-import Gallery from "../components/Organisms/Gallery";
-
+import Gallery from "../components/Organisms";
 
 const Home = () => {
   return (

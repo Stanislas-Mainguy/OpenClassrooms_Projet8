@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../Organisms/Header";
-import Main from "../Template/Main";
 import Footer from "../Organisms/Footer";
 
-const Template = () => {
+const Template = ({ children }) => {
     return (
         <div id="global">
             <Header />
-            <Main />
+            <div className="main">
+                {children}
+            </div>
             <Footer />
         </div>
     );

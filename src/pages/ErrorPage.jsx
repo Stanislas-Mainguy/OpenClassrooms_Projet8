@@ -1,5 +1,5 @@
 import React from "react";
-import Template from "../components/Template/Pages";
+import Template from "../components/Template/PagesTemplate";
 import Error from '../components/Molecules/Error';
 
 const ErrorPage = () => {
@@ -8,5 +8,6 @@ const ErrorPage = () => {
       <Error />
     </Template>
   );
-}
+};
+
 export default ErrorPage;

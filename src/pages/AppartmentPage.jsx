@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
-import Template from "../components/Template/Pages";
+import Template from "../components/Template/PagesTemplate";
 import AppartmentBlock from "../components/Organisms/AppartmentBlock";
 import data from "../data/data.json";
 
