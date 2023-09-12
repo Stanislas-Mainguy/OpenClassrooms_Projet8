@@ -12,4 +12,5 @@ const AboutPage = () => {
     </Template>
   );
 };
+
 export default AboutPage;

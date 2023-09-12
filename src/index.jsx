@@ -7,7 +7,6 @@ import About from './pages/AboutPage';
 import Error from './pages/ErrorPage';
 import Appartment from './pages/AppartmentPage';
 
-
 const root = createRoot(document.getElementById('root'));
 
 root.render(
@@ -17,7 +16,7 @@ root.render(
         <Route exact path="/" element={<Home />} />
         <Route path="/appartment/:id" element={<Appartment />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error />} />
+        <Route path="*" element={<Error />} status={404} />
       </Routes>
     </Router>
   </React.StrictMode>

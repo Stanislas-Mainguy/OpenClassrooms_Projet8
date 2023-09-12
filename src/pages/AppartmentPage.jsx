@@ -6,13 +6,9 @@ import data from "../data/data.json";
 
 const AppartmentPage = () => {
     const { id } = useParams();
-    let appartement = {};
-    data.map((appartmentSearch) => {
-        if (appartmentSearch.id === id) {
-            appartement = appartmentSearch;
-        }
-    });
-    if(appartement.id === undefined){
+    const appartement = data.find((appartmentSearch) => appartmentSearch.id === id) ;
+    
+    if(appartement === undefined){
         return <Navigate to="/error" />
     }
     return (
@@ -21,4 +17,5 @@ const AppartmentPage = () => {
         </Template>   
     );
 };
+
 export default AppartmentPage;
