@@ -2,6 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 43px;
-  width: 1240px;
-  height: auto;
+  width: 100%;
+  max-width: 1240px;
 }/*# sourceMappingURL=main.css.map */

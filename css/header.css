@@ -1,11 +1,10 @@
 .header {
   display: flex;
-  width: 1240px;
-  height: 68px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 720.678px;
-  margin-bottom: 50px;
+  width: 100%;
+  max-width: 1240px;
+  height: 68px;
 }
 
 .logo {
@@ -22,11 +21,11 @@
 .nav {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 309px;
   height: 34px;
-  align-items: center;
 }
-.nav .nav-item {
+.nav-item {
   display: flex;
   justify-content: flex-end;
   list-style: none;
@@ -34,11 +33,11 @@
   height: 100%;
   gap: 57px;
 }
-.nav .nav-link {
+.nav-link {
   text-decoration: none;
   color: #FF6060;
   font-size: 24px;
 }
-.nav .nav-link.active {
+.nav-link.active {
   text-decoration: underline;
 }/*# sourceMappingURL=header.css.map */

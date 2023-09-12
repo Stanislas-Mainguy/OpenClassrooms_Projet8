@@ -1,9 +1,12 @@
 .gallery {
-    width: 1140px;
-    border-radius: 25px;
-    background-color: #F6F6F6;
-    padding: 56px 50px;
     display: grid;
-    grid-template-columns: repeat(3, 340px);
-    gap: 60px 50px;
+    box-sizing: border-box;
+    justify-content: center;
+    background-color: #F6F6F6;
+    max-width: 1240px;
+    width: 100%;
+    border-radius: 25px;
+    padding: min(56px, 4.52%) min(50px, 4.03%);
+    grid-template-columns: repeat(auto-fill, 340px);
+    gap: max(15px, 5vw) max(10px, 5vh);
 }
