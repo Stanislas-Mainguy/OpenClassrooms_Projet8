@@ -6,9 +6,9 @@ const Template = ({ children }) => {
     return (
         <div id="global">
             <Header />
-            <div className="main">
+            <main className="main">
                 {children}
-            </div>
+            </main>
             <Footer />
         </div>
     );
