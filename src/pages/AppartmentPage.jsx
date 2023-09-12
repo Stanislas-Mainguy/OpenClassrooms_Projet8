@@ -1,4 +1,4 @@
-/* import React from "react";
+import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 import Template from "../components/Template/Pages";
 import AppartmentBlock from "../components/Organisms/AppartmentBlock";
@@ -21,4 +21,4 @@ const AppartmentPage = () => {
         </Template>   
     );
 };
-export default AppartmentPage; */
+export default AppartmentPage;
