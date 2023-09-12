@@ -1,16 +1,15 @@
 import React from 'react';
-import Header from '../components/Organisms/Header';
-import Main from '../components/Organisms/Main';
-import Footer from '../components/Organisms/Footer';
+import Template from '../components/Template/Pages';
+import Banner from '../components/Molecules/Banner';
+import AboutBlock from '../components/Organisms/AboutBlock';
+import aboutData from '../data/about.json';
 
 const AboutPage = () => {
   return (
-    <div id="global">
-      <Header />
-      <Main page="AboutPage" />
-      <Footer />
-    </div>
+    <Template>
+      <Banner page="AboutPage"/>
+      <AboutBlock items={aboutData} />
+    </Template>
   );
 };
-
 export default AboutPage;

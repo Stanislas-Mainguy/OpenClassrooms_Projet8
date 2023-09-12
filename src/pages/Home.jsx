@@ -1,15 +1,15 @@
 import React from "react";
-import Header from "../components/Organisms/Header";
-import Main from "../components/Organisms/Main";
-import Footer from "../components/Organisms/Footer";
+import Template from "../components/Template/Pages";
+import Banner from "../components/Molecules/Banner";
+import Gallery from "../components/Organisms/Gallery";
+
 
 const Home = () => {
   return (
-    <div id="global">
-      <Header />
-      <Main page="HomePage" />
-      <Footer />
-    </div>
+    <Template>
+      <Banner page="home-page" />
+      <Gallery />
+    </Template>
   );
 }
 

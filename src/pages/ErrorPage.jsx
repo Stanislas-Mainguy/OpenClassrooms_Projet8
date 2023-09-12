@@ -1,16 +1,12 @@
 import React from "react";
-import Header from "../components/Organisms/Header";
-import Main from "../components/Organisms/Main";
-import Footer from "../components/Organisms/Footer";
+import Template from "../components/Template/Pages";
+import Error from '../components/Molecules/Error';
 
 const ErrorPage = () => {
   return (
-    <div id="global">
-      <Header />
-      <Main page="ErrorPage" />
-      <Footer />
-    </div>
+    <Template>
+      <Error />
+    </Template>
   );
 }
-
 export default ErrorPage;

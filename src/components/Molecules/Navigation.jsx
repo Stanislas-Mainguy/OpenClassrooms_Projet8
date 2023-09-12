@@ -4,14 +4,12 @@ import AboutNav from "../Atoms/AboutNav";
 
 const Nav = () => {
   return (
-    <div id="global">
-      <nav className="nav">
-        <ul className="nav-item">
-          <HomeNav />
-          <AboutNav />
-        </ul>
-      </nav>
-    </div>
+    <nav className="nav">
+      <ul className="nav-item">
+        <HomeNav />
+        <AboutNav />
+      </ul>
+    </nav>
   );
 };
 
