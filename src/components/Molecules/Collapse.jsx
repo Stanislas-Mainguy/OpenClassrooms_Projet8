@@ -18,9 +18,12 @@ const Collapse = ({ data }) => {
 
     if (descriptionRef.current) {
       const descriptionHeight = descriptionRef.current.scrollHeight;
+      const computedStyle = window.getComputedStyle(descriptionRef.current);
+      const paddingTop = parseFloat(computedStyle.paddingTop);
+      const paddingBottom = parseFloat(computedStyle.paddingBottom);
 
       if (!isDescriptionOpen) {
-        descriptionRef.current.style.maxHeight = `${descriptionHeight}px`;
+        descriptionRef.current.style.maxHeight = `${descriptionHeight + paddingTop + paddingBottom}px`;
       } else {
         descriptionRef.current.style.maxHeight = '0';
       }
