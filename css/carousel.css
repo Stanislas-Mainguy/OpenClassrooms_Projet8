@@ -1,30 +1,49 @@
 .carousel {
-  width: 1240px;
-  height: 415px;
   position: relative;
+  color: #FFFFFF;
+  min-width: 100%;
+  height: 415px;
   border-radius: 25px;
+  margin-bottom: 30px;
 }
 .carousel-counter {
   position: absolute;
+  font-size: 24px;
   bottom: 25px;
   left: 50%;
-  right: 50%;
 }
 .carousel-prev {
   position: absolute;
   left: 24px;
-  top: 50%;
-  bottom: 50%;
+  top: 149px;
+  width: 47px;
+  height: 80px;
+}
+.carousel-prev img {
+  width: inherit;
+  height: inherit;
 }
 .carousel-next {
   position: absolute;
   right: 24px;
-  top: 50%;
-  bottom: 50%;
+  top: 149px;
+  width: 47px;
+  height: 80px;
 }
-.carousel img {
+.carousel-next img {
+  width: inherit;
+  height: inherit;
+}
+.carousel-pictures {
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  border-radius: inherit;
+}
+.carousel-pictures img {
+  width: inherit;
+  height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: inherit;
 }/*# sourceMappingURL=carousel.css.map */

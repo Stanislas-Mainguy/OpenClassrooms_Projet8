@@ -4,6 +4,13 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 45px;
-  gap: 50px;
+  margin-top: clamp(20px, 2.4086vw + 22.481px, 45px);
+  gap: clamp(27px, 2.2474vw + 22.752px, 50px);
+}
+
+@media screen and (max-width: 380px) {
+  #global {
+    margin-top: 20px;
+    gap: 27px;
+  }
 }/*# sourceMappingURL=global.css.map */

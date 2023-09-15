@@ -4,7 +4,9 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 223px;
+  min-height: 111px;
+  max-height: 223px;
+  height: clamp(111px, 10vw, 223px);
   border-radius: 25px;
 }
 .banner img {
@@ -13,14 +15,14 @@
   -o-object-position: center;
      object-position: center;
   border-radius: inherit;
-  width: 100%;
+  width: inherit;
   height: 100%;
 }
 .banner-text {
   position: absolute;
   text-align: center;
   color: #FFFFFF;
-  font-size: 48px;
+  font-size: clamp(24px, 4vw, 48px);
 }
 .banner-filter {
   position: absolute;
@@ -30,4 +32,20 @@
   width: 100%;
   height: 100%;
   opacity: 0.3;
+}
+
+@media screen and (max-width: 380px) {
+  .banner {
+    width: 335px;
+    height: 111px;
+  }
+  .banner-text {
+    text-align: start;
+    line-height: 100%;
+    left: 16px;
+    top: 31px;
+    width: 217px;
+    height: 48px;
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=banner.css.map */

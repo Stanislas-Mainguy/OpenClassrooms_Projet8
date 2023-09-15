@@ -8,5 +8,15 @@
   border-radius: 25px;
   padding: min(56px, 4.52%) min(50px, 4.03%);
   grid-template-columns: repeat(auto-fill, 340px);
-  gap: minmax(15px, 60px) minmax(10px, 50px);
+  gap: clamp(20px, 5vw, 60px) clamp(10px, 5vh, 50px);
+}
+
+@media screen and (max-width: 380px) {
+  .gallery {
+    padding: 0;
+    width: 335px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    background-color: #FFFFFF;
+  }
 }/*# sourceMappingURL=gallery.css.map */
