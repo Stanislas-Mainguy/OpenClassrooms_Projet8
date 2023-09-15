@@ -11,6 +11,7 @@ const AppartmentPage = () => {
     if(appartement === undefined){
         return <Navigate to="/error" />
     }
+
     return (
         <Template>    
             <AppartmentBlock appartement={appartement} />
