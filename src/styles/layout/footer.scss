@@ -1,15 +1,13 @@
 .footer {
-    background-color: #000000;
-    color: #FFFFFF;
-    height: 209px;
-    width: 100%;
-    margin-top: 50px;
-    gap: 28.56px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    height: 209px;
+    width: 100%;
+    gap: 28.56px;
 
     .logo-footer {
         width: 122px;
@@ -22,6 +20,18 @@
             width: 100%;
             height: auto;
             filter: brightness(0) invert(1);
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .footer {
+        gap: 15px;
+
+        p {
+            text-align: center;
+            width: 133px;
+            font-size: 12px;
         }
     }
 }

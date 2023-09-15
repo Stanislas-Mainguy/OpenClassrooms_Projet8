@@ -1,33 +1,55 @@
 .carousel {
-    width: 1240px;
-    height: 415px;
     position: relative;
+    color: #FFFFFF;
+    min-width: 100%;
+    height: 415px;
     border-radius: 25px;
+    margin-bottom: 30px;
 
     &-counter {
         position: absolute;
+        font-size: 24px;
         bottom: 25px;
         left: 50%;
-        right: 50%;
     }
 
     &-prev {
         position: absolute;
         left: 24px;
-        top: 50%;
-        bottom: 50%;
+        top: 149px;
+        width: 47px;
+        height: 80px;
+
+        img {
+            width: inherit;
+            height: inherit;
+        }
     }
 
     &-next {
         position: absolute;
         right: 24px;
-        top: 50%;
-        bottom: 50%;
+        top: 149px;
+        width: 47px;
+        height: 80px;
+
+        img {
+            width: inherit;
+            height: inherit;
+        }
     }
 
-    img {
+    &-pictures {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        box-sizing: border-box;
+        border-radius: inherit;
+
+        img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            border-radius: inherit;
+        }
     }
 }

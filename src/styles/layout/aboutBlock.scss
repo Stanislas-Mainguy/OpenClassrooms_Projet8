@@ -1,8 +1,8 @@
 .about-block {
-    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
     align-items: center;
+    width: 100%;
+    gap: clamp(19px, 2.2474vw + 7.3636px, 30px);
 }
