@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "../Molecules/Carousel";
 import HostInfo from "../Molecules/HostInfo";
 import AppartementInfo from "../Molecules/AppartmentInfo";
-import Collapse from "../"
+import Collapse from "../Molecules/Collapse";
 
 const AppartmentBlock = ({ appartement }) => {
     return (
@@ -12,8 +12,8 @@ const AppartmentBlock = ({ appartement }) => {
                 <AppartementInfo appartement={appartement} />
                 <HostInfo appartement={appartement} />
             </div>
-            <div className="collapse-block">
-                <Collapse appartement={appartement} page="Appartment" />
+            <div className="collapse-appartment-block">
+                <Collapse appartement={appartement} page="/appartment" />
             </div>
         </div>
     );
