@@ -8,7 +8,7 @@ const HostPictureAndName = ({ appartement }) => {
         <div className="host-info">
             <span className="host-info-name">{hostName}</span>
             <div className="host-info-picture">
-                <img src={picture} alt="Visage de l'host"/>
+                <img src={picture} alt="Portrait de l'host"/>
             </div>
         </div>
     );
