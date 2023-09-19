@@ -13,7 +13,8 @@ const AppartmentBlock = ({ appartement }) => {
                 <HostInfo appartement={appartement} />
             </div>
             <div className="collapse-appartment-block">
-                <Collapse appartement={appartement} page="/appartment" />
+                <Collapse title="Description" content={appartement.description} />
+                <Collapse title="Équipements" content={appartement.equipments} liste={true} />
             </div>
         </div>
     );
