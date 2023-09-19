@@ -15,7 +15,7 @@
   gap: 15px;
 }
 .appart-host-block .host-block .host-info-name {
-  width: 93px;
+  width: 82px;
   height: 52px;
   color: #FF6060;
   font-size: clamp(12px, 2.5vw, 18px);
@@ -95,9 +95,10 @@
   .appart-host-block {
     padding: 0px 20px;
   }
-  .appartment-block-tag {
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 18px;
+  .host-info {
+    display: flex;
+  }
+  .host-info-name {
+    width: 30px;
   }
 }/*# sourceMappingURL=appartHostBlock.css.map */
