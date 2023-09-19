@@ -5,12 +5,7 @@ const CollapseArrow = ({ isRotated, onClick }) => {
   const arrowClassName = `collapse-arrow ${isRotated ? 'rotated' : ''}`;
 
   return (
-    <img
-      className={arrowClassName}
-      src={ArrowImage}
-      alt="Arrow"
-      onClick={onClick}
-    />
+    <img className={arrowClassName} src={ArrowImage} alt="Arrow" onClick={onClick} />
   );
 };
 
