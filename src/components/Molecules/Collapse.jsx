@@ -1,74 +1,29 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import CollapseArrow from '../Atoms/CollapseArrow';
+import CollapseDescript from '../Atoms/CollapseDescription';
+import CollapseTitle from '../Atoms/CollapseTitle';
 
-const MixContentCollapse = ({ title, content }) => {
+const Collapse = ({ title, content, liste = false }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isArrowRotated, setIsArrowRotated] = useState(false);
-  const descriptionRef = useRef(null);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, []);
-
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
-    setIsArrowRotated(!isArrowRotated);
-
-    if (descriptionRef.current) {
-      const descriptionHeight = descriptionRef.current.scrollHeight;
-      const computedStyle = window.getComputedStyle(descriptionRef.current);
-      const paddingTop = parseFloat(computedStyle.paddingTop);
-      const paddingBottom = parseFloat(computedStyle.paddingBottom);
-
-      if (!isOpen) {
-        descriptionRef.current.style.maxHeight = `${descriptionHeight + paddingTop + paddingBottom}px`;
-      } else {
-        descriptionRef.current.style.maxHeight = '0';
-      }
-    }
   };
-
+  
   const descriptionClass = `collapse-description ${isOpen ? 'open' : 'close'}`;
-
+  
   return (
-    <>
+    <div className="collapse">
       <div className="collapse-block">
-        <div className="collapse-title">
-          <h3>{title}</h3>
-        </div>
+        <CollapseTitle title={title}/>
         <div className="collapse-arrow" onClick={toggleCollapse}>
-          <CollapseArrow isRotated={isArrowRotated} />
+          <CollapseArrow isRotated={isOpen} />
         </div>
       </div>
-      <div ref={descriptionRef} className={descriptionClass}>
-        {content}
+      <div className={descriptionClass}>
+        <CollapseDescript data={content} liste={liste} />
       </div>
-    </>
+    </div>
   );
 };
 
-const GeneralCollapse = ({ data, page, appartement }) => {
-  const isAppartmentPage = page === "/appartment";
-
-  if (isAppartmentPage) {
-    return (
-      <>
-        <div className="collapse">
-          <MixContentCollapse title="Description" content={appartement.description} />
-        </div>
-      
-        <div className="collapse">
-          <MixContentCollapse title="Équipements" content={appartement.equipments.join(', ')} />
-        </div>  
-      </>
-    );
-  } else {
-    return (
-      <div className="collapse">
-        <MixContentCollapse title={data.title} content={data.description} />
-      </div>
-    );
-  }
-};
-
-export default GeneralCollapse;
+export default Collapse;
