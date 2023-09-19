@@ -10,7 +10,7 @@ const AppartementInfo = ({ appartement }) => {
     }
 
     const tagDivs = tags.map((tag, index) => (
-        <div key={index} className="appartment-block-tag">
+        <div key={index} className="tag">
             <span>{tag}</span>
         </div>
     ));
