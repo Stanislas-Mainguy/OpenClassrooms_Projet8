@@ -1,9 +1,8 @@
 .carousel {
     position: relative;
     color: #FFFFFF;
-    max-width: 1240px;
-    min-width: 355px;
-    height: clamp(255px, 60vw, 415px);
+    width: 100%;
+    height: 415px;
     border-radius: 25px;
     margin-bottom: 30px;
 
@@ -43,14 +42,14 @@
     }
 
     &-pictures {
-        width: 100%;
-        height: 100%;
+        width: inherit;
+        height: inherit;
         box-sizing: border-box;
         border-radius: inherit;
 
         img {
-            width: inherit;
-            height: inherit;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             border-radius: inherit;
         }
@@ -61,8 +60,6 @@
     .carousel {
         width: 355px;
         height: 255px;
-        margin-left: auto;
-        margin-right: auto;
 
         &-prev {
             height: 24px;

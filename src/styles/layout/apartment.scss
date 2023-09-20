@@ -1,0 +1,127 @@
+.apartment-host-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1240px;
+
+    &-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .apartment-block {
+            display: flex;
+            flex-direction: column;
+            color: #FF6060;
+
+            &-info {
+                font-size: clamp(18px, 4vw, 36px);
+            }
+            
+            &-location {
+                font-size: clamp(14px, 2.5vw, 18px);
+                margin-bottom: 20px;
+            }
+        
+            &-all-tags {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 10px;
+        
+                .tag {
+                    display: flex;
+                    color: #FFFFFF;
+                    background-color: #FF6060;
+                    height: 25px;
+                    border-radius: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: clamp(10px, 2vw, 14px);
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+            }
+        }
+        
+        .host-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        
+            &-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                gap: 15px;
+        
+                &-name {
+                    width: 82px;
+                    height: 52px;
+                    color: #FF6060;
+                    font-size: clamp(12px, 2.5vw, 18px);
+                    text-align: right;
+                }
+        
+                &-picture {
+                    width: clamp(32px, 8vw, 64px);
+                    height: clamp(32px, 8vw, 64px);
+                    border-radius: 50%;
+            
+                    img {
+                        width: inherit;
+                        height: inherit;
+                        object-fit: cover;
+                        border-radius: inherit;
+                    }
+                }
+            }
+    
+            &-rating {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                width: clamp(98px, 25vw, 196px);
+                height: clamp(18px, 4.5vw, 36px);
+                
+                
+                svg {
+                    width: clamp(25px, 4.5vw, 32px);
+                    height: clamp(25px, 4.5vw, 32px);
+    
+                    &.active {
+                        fill: #FF6060;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.apartment-collapse-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 24px;
+    gap: 76px;
+
+    .collapse {
+        max-width: 582px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .apartment-collapse-block {
+        gap: max(10px, 1vw);
+    }
+}
+
+@media screen and (max-width: 1176px) {
+    .apartment-collapse-block {
+        justify-content: center;
+    }
+}

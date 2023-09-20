@@ -1,8 +1,8 @@
-.main {
+.about-block {
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 43px;
     width: 100%;
-    max-width: 1320px;
+    gap: clamp(19px, 2.2474vw + 7.3636px, 30px);
 }
