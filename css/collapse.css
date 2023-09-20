@@ -47,6 +47,8 @@
   padding: 0px 20px;
   border-radius: 5px;
   overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s;
 }
 .collapse-description p {
   font-size: clamp(11px, 2.2474vw + 2.0909px, 18px);
@@ -62,36 +64,15 @@
   box-sizing: border-box;
   width: inherit;
   max-width: inherit;
-  height: auto;
+  max-height: 100%;
   padding: 18px 20px 20px 20px;
 }
 .collapse-description.close {
   box-sizing: border-box;
   width: inherit;
   max-width: inherit;
-  max-height: 0;
 }
 
-.collapse-appartment-block {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 24px;
-  gap: 76px;
-}
-.collapse-appartment-block .collapse {
-  max-width: 582px;
-}
-
-@media screen and (max-width: 1240px) {
-  .collapse-appartment-block {
-    align-items: center;
-    gap: 20px;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
 @media screen and (max-width: 380px) {
   .collapse {
     width: 335px;
