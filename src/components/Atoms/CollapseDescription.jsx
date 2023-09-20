@@ -2,11 +2,13 @@ import React from "react";
 
 const CollapseDescript = ({ data, liste }) => {
     if (liste) {
-      return (<ul>
+      return (
+        <ul>
           {data.map((item, index) => (
-            <li key={index}>{item}</li>
+          <li key={index}>{item}</li>
           ))}
-        </ul>);
+        </ul>
+      );
     } else {
       return <p>{data}</p>
     };

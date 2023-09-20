@@ -7,7 +7,7 @@ const Gallery = () => {
   return (
     <div className="gallery">
       {data.map((item) => (
-        <Link key={item.id} to={`/appartment/${item.id}`}>
+        <Link key={item.id} to={`/apartment/${item.id}`}>
           <Card data={item} />
         </Link>
       ))}

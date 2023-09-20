@@ -2,11 +2,11 @@ import React from "react";
 import Stars from "./Stars";
 import HostPictureAndName from "../Atoms/HostPictureAndName";
 
-const HostInfo = ({ appartement }) => {
+const HostInfo = ({ apartment }) => {
     return (
         <div className="host-block">
-            <HostPictureAndName appartement={appartement} />
-            <Stars appartement={appartement} />
+            <HostPictureAndName apartment={apartment} />
+            <Stars apartment={apartment} />
         </div>
     );
 };

@@ -1,13 +1,10 @@
 import React from "react";
 
-const HostPictureAndName = ({ appartement }) => {
-    const picture = appartement.host.picture;
-    const hostName = appartement.host.name;
-
+const HostPictureAndName = ({ apartment: { host: { picture, name } } }) => {
     return (
-        <div className="host-info">
-            <span className="host-info-name">{hostName}</span>
-            <div className="host-info-picture">
+        <div className="host-block-info">
+            <span className="host-block-info-name">{name}</span>
+            <div className="host-block-info-picture">
                 <img src={picture} alt="Portrait de l'host"/>
             </div>
         </div>

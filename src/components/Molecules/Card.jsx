@@ -6,7 +6,7 @@ const Card = ({ data }) => {
   const handleClick = () => {
     const cardId = data.id;
 
-    navigate(`/appartment/${cardId}`);
+    navigate(`/apartment/${cardId}`);
   };
 
   return (

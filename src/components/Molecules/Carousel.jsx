@@ -1,46 +1,36 @@
-import React, { useState } from 'react';
-import ArrowLeft from "../../assets/pictures/carousel-arrow-left.svg";
-import ArrowRight from "../../assets/pictures/carousel-arrow-right.svg";
+import React, { useState } from "react";
+import CarouselPictures from "../Atoms/CarouselPictures";
+import CarouselArrows from "../Atoms/CarouselArrows";
+import CarouselCounter from "../Atoms/CarouselCounter";
 
-const AppartmentCarousel = ({ appartement }) => {
+const ApartmentCarousel = ({ apartment }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-    const handlePreviousClick = () => {
-        if (currentImageIndex === 0) {
-            setCurrentImageIndex(appartement.pictures.length - 1);
-        } else {
-            setCurrentImageIndex(currentImageIndex - 1);
-        }
-    };
 
-    const handleNextClick = () => {
-        if (currentImageIndex === appartement.pictures.length - 1) {
+    const handleArrowClick = (direction) => {
+        const newIndex = currentImageIndex + direction;
+    
+        if (newIndex < 0) {
+            setCurrentImageIndex(apartment.pictures.length - 1);
+        } else if (newIndex >= apartment.pictures.length) {
             setCurrentImageIndex(0);
         } else {
-            setCurrentImageIndex(currentImageIndex + 1);
+            setCurrentImageIndex(newIndex);
         }
     };
 
-    const isSinglePhoto = appartement.pictures.length === 1;
+    const showControls = apartment.pictures.length > 1;
 
     return (
         <div className="carousel">
-            <div className="carousel-pictures">
-                <img src={appartement.pictures[currentImageIndex]} alt={`Visuel de l'appartement ${currentImageIndex + 1}`} />
-            </div>
-            {!isSinglePhoto && (
+            <CarouselPictures apartment={apartment} currentImageIndex={currentImageIndex} />
+            {showControls && (
                 <>
-                    <div className="carousel-prev" onClick={handlePreviousClick}>
-                        <img src={ArrowLeft} alt="Flèche gauche" />
-                    </div>
-                    <span className="carousel-counter">{currentImageIndex + 1}/{appartement.pictures.length}</span>
-                    <div className="carousel-next" onClick={handleNextClick}>
-                        <img src={ArrowRight} alt="Flèche droite" />
-                    </div>
+                    <CarouselArrows handleArrowClick={handleArrowClick} />
+                    <CarouselCounter currentImageIndex={currentImageIndex} totalImages={apartment.pictures.length} />
                 </>
             )}
         </div>
     );
 };
 
-export default AppartmentCarousel;
+export default ApartmentCarousel;
