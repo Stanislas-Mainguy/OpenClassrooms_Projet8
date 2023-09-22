@@ -4,13 +4,15 @@ import Footer from "../Organisms/Footer";
 
 const Template = ({ children }) => {
     return (
-        <div id="global">
-            <Header />
-            <main className="main">
-                {children}
-            </main>
+        <>
+            <div id="global">
+                <Header />
+                <main className="main">
+                    {children}
+                </main>
+            </div>
             <Footer />
-        </div>
+        </>
     );
 };
 
