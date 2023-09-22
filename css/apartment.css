@@ -3,16 +3,19 @@
   flex-direction: column;
   width: 100%;
   max-width: 1240px;
+  box-sizing: border-box;
 }
 .apartment-host-block-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .apartment-host-block-info .apartment-block {
   display: flex;
   flex-direction: column;
   color: #FF6060;
+  max-width: 700px;
 }
 .apartment-host-block-info .apartment-block-info {
   font-size: clamp(18px, 4vw, 36px);
@@ -53,11 +56,15 @@
   gap: 15px;
 }
 .apartment-host-block-info .host-block-info-name {
+  display: flex;
   width: 82px;
-  height: 52px;
+  height: inherit;
   color: #FF6060;
   font-size: clamp(12px, 2.5vw, 18px);
+  flex-direction: column;
+  justify-content: flex-end;
   text-align: right;
+  align-items: center;
 }
 .apartment-host-block-info .host-block-info-picture {
   width: clamp(32px, 8vw, 64px);
@@ -93,7 +100,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 24px;
-  gap: 76px;
+  gap: clamp(10px, 76px - 6vw, 76px);
 }
 .apartment-collapse-block .collapse {
   max-width: 582px;
@@ -104,8 +111,26 @@
     gap: max(10px, 1vw);
   }
 }
-@media screen and (max-width: 1176px) {
+@media screen and (max-width: 1217px) {
   .apartment-collapse-block {
     justify-content: center;
+  }
+}
+@media screen and (max-width: 936px) {
+  .apartment-block {
+    margin-bottom: 16px;
+  }
+  .apartment-host-block-info .apartment-block-all-tags .tag {
+    padding: 0px 20px;
+  }
+  .apartment-host-block .host-block {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 621px) {
+  .host-block .host-block-info {
+    width: 120px;
   }
 }/*# sourceMappingURL=apartment.css.map */

@@ -5,6 +5,7 @@
   height: 415px;
   border-radius: 25px;
   margin-bottom: 30px;
+  box-sizing: border-box;
 }
 .carousel-counter {
   position: absolute;
@@ -52,7 +53,7 @@
 
 @media screen and (max-width: 380px) {
   .carousel {
-    width: 355px;
+    width: 335px;
     height: 255px;
   }
   .carousel-prev {
