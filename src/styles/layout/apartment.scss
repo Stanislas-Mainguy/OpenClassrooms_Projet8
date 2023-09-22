@@ -1,18 +1,23 @@
+@import "../utilities/variables.scss";
+
 .apartment-host-block {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 1240px;
+    box-sizing: border-box;
 
     &-info {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .apartment-block {
             display: flex;
             flex-direction: column;
-            color: #FF6060;
+            color: $secondary-color;
+            max-width: 700px;
 
             &-info {
                 font-size: clamp(18px, 4vw, 36px);
@@ -29,11 +34,12 @@
                 flex-wrap: wrap;
                 align-items: center;
                 gap: 10px;
+                
         
                 .tag {
                     display: flex;
-                    color: #FFFFFF;
-                    background-color: #FF6060;
+                    color: $primary-color;
+                    background-color: $secondary-color;
                     height: 25px;
                     border-radius: 10px;
                     align-items: center;
@@ -58,11 +64,15 @@
                 gap: 15px;
         
                 &-name {
+                    display: flex;
                     width: 82px;
-                    height: 52px;
-                    color: #FF6060;
+                    height: inherit;
+                    color: $secondary-color;
                     font-size: clamp(12px, 2.5vw, 18px);
+                    flex-direction: column;
+                    justify-content: flex-end;
                     text-align: right;
+                    align-items: center;
                 }
         
                 &-picture {
@@ -93,7 +103,7 @@
                     height: clamp(25px, 4.5vw, 32px);
     
                     &.active {
-                        fill: #FF6060;
+                        fill: $secondary-color;
                     }
                 }
             }
@@ -107,7 +117,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 24px;
-    gap: 76px;
+    gap: clamp(10px, 76px - 6vw, 76px);
 
     .collapse {
         max-width: 582px;
@@ -120,8 +130,30 @@
     }
 }
 
-@media screen and (max-width: 1176px) {
+@media screen and (max-width: 1217px) {
     .apartment-collapse-block {
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 936px) {
+    .apartment-block {
+        margin-bottom: 16px;
+    }
+
+    .apartment-host-block-info .apartment-block-all-tags .tag {
+        padding: 0px 20px;
+    }
+
+    .apartment-host-block .host-block {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    .host-block .host-block-info {
+        width: 120px;
     }
 }

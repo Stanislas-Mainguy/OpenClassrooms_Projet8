@@ -1,3 +1,5 @@
+@import "../utilities/variables.scss";
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -39,7 +41,7 @@
 
     &-link { 
         text-decoration: none;
-        color: #FF6060;
+        color: $secondary-color;
         font-size: clamp(12px, 1.179vw + 7.592px, 24px);
 
         &.active {

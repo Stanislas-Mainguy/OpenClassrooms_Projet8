@@ -5,6 +5,8 @@
     align-items: center;
     margin-top: clamp(20px, 2.4086vw + 22.481px, 45px);
     gap: clamp(27px, 2.2474vw + 22.752px, 50px);
+    padding: 0px 20px;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 380px) {

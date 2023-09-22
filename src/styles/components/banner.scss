@@ -1,3 +1,5 @@
+@import "../utilities/variables.scss";
+
 .banner {
     display: flex;
     align-items: center;
@@ -20,7 +22,7 @@
     &-text {
         position: absolute;
         text-align: center;
-        color: #FFFFFF;
+        color: $primary-color;
         font-size: clamp(24px, 4vw, 48px);
     }
 

@@ -1,3 +1,5 @@
+@import "../utilities/variables.scss";
+
 .error {
     display: flex;
     flex-direction: column;
@@ -5,12 +7,11 @@
     width: 100%;
     height: 100%;
     gap: 139px;
-    color: #FF6060;
-    margin-top: 117px;
-    margin-bottom: 117px;
+    color: $secondary-color;
+    margin: 117px 0px;
 
-    &-link, a{
-        color: inherit;
+    &-link, a {
+        color: $secondary-color;
     }
 
     &-404 {
