@@ -5,14 +5,14 @@ const Stars = ({ apartment }) => {
     const rating = parseInt(apartment.rating);
     
     return (
-        <div className="host-block-rating">
-            <Star className={rating >=1 ? 'active' : ''} />
-            <Star className={rating >=2 ? 'active' : ''}/>
-            <Star className={rating >=3 ? 'active' : ''}/>
-            <Star className={rating >=4 ? 'active' : ''}/>
-            <Star className={rating >=5 ? 'active' : ''}/>
-        </div>
-    );
+      <div className="host-block-rating">
+        <Star active={rating >= 1} />
+        <Star active={rating >= 2} />
+        <Star active={rating >= 3} />
+        <Star active={rating >= 4} />
+        <Star active={rating >= 5} />
+      </div>
+    )
 };
 
 export default Stars;
