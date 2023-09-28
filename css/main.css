@@ -1,5 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 43px;
+  width: 100%;
+  max-width: 1320px;
+}/*# sourceMappingURL=main.css.map */ | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -314,8 +320,7 @@ h3 {
   align-items: center;
   margin-top: clamp(20px, 2.4086vw + 22.481px, 45px);
   gap: clamp(27px, 2.2474vw + 22.752px, 50px);
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0px 20px;
   margin-bottom: 50px;
 }
 
@@ -477,11 +482,10 @@ h3 {
   height: 100%;
   gap: 139px;
   color: #FF6060;
-  margin-top: 117px;
-  margin-bottom: 117px;
+  margin: 117px 0px;
 }
 .error-link, .error a {
-  color: inherit;
+  color: #FF6060;
 }
 .error-404 {
   font-size: clamp(96px, 20vw, 288px);
